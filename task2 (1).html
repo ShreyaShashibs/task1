@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('sp.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .nav {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .course-container {
+            display: none;
+            width: calc(30% - 20px);
+            padding: 25px;
+            background-color: white; 
+            color: #333;
+            margin: 10px;
+            box-sizing: border-box;
+            vertical-align: top;
+            transition: opacity 0.5s;
+        }
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .course-description {
+            margin-top: 10px;
+        }
+        .register-button {
+            display: none; 
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+	  h3{
+            font-weight:bold;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Welcome to Tutorial's point</h1>
+        <p>We are passionate about providing high-quality tutorials and educational content to help you learn and grow in your chosen field.<br><br></p>
+         <h3>learn with fun!!!<br><br></h3>
+        <div class="course-container">
+            <div class="course-title">Design and analysis of algorithm</div>
+            <div class="course-description">Algorithm analysis is an important part of computational complexity theory, which provides theoretical estimation for the required resources of an algorithm to solve a specific computational problem. Analysis of algorithms is the determination of the amount of time and space resources required to execute it.<br><br></div>
+        </div>
+        
+        <div class="course-container">
+            <div class="course-title">Operating System</div>
+            <div class="course-description">Operating System lies in the category of system software. It basically manages all the resources of the computer. An operating system acts as an interface between the software and different parts of the computer or the computer hardware. The operating system is designed in such a way that it can manage the overall resources and operations of the computer. </div>
+        </div>
+        
+        <div class="course-container">
+            <div class="course-title">Web Development</div>
+            <div class="course-description">Web development, also known as website development, refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser. It may, however, also include web design, web programming, and database management.<br><br><br></div>
+        </div>
+        
+      
+       
+        <a href="#register" class="register-button">Register</a>
+    </div>
+    
+    <script>
+       
+        const courseContainers = document.querySelectorAll('.course-container');
+        const registerButton = document.querySelector('.register-button');
+         function showCourseContainers() {
+            let delay = 0;
+            courseContainers.forEach((container, index) => {
+                setTimeout(() => {
+                    container.style.display = 'inline-block';
+                }, delay);
+                delay += 500; 
+            });
+            setTimeout(() => {
+                registerButton.style.display = 'block';
+            }, delay + 500); // Adjust the delay time as needed
+        }
+        setTimeout(showCourseContainers, 1000);
+    </script>
+</body>
+</html>
